@@ -38,13 +38,19 @@ if [[ `uname` == "Darwin"   ]]; then
   echo "Installing Node lts"
   fnm install --lts
 
-
   echo "Installing Git"
   brew install git
   echo "Setting up git"
   git config --global user.name "David Garcia"
   git config --global user.email "david_5043@hotmail.com"
   git config --global init.defaultBranch "master"
+
+  echo "Installing Cascadia Code fonts (vscode)"
+  brew tap homebrew/cask-fonts
+  brew install --cask font-cascadia-code
+  brew install --cask font-cascadia-code-pl
+  brew install --cask font-cascadia-mono
+  brew install --cask font-cascadia-mono-pl
 fi
 
 echo "Removing existing dotfiles"
