@@ -8,7 +8,7 @@ if [[ `uname` == "Linux"   ]]; then
   echo "Changing shell to zsh"
   sudo chsh -s $(which zsh)
   # Adding homebrew to zprofile
-  echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> /home/charlie/.zprofile
+  echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> /home/Kiyoshi/.zprofile
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   echo "Installing PyEnv"
   curl https://pyenv.run | bash
