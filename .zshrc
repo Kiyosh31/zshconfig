@@ -1,8 +1,8 @@
 # -------------- Alias -------------- #
 
 # System
-alias reloadterm=source ~/.zshrc
-alias zshconfig=code ~/.zshrc
+alias reloadterm="source ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 
 # Git
 gcop() {
@@ -15,3 +15,11 @@ gcop() {
     echo "YOU MUST PROVIDE A MESSAGE"
   fi
 }
+
+alias gstt="git status"
+
+
+# -------------- Managers -------------- #
+
+# Node
+eval "$(fnm env --use-on-cd)"

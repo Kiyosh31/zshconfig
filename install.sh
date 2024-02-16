@@ -26,12 +26,18 @@ if [[ `uname` == "Darwin"   ]]; then
 
   echo "Installing PyEnv"
   brew install pyenv
+  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+  echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+  echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
   echo "Installing golang"
   brew install go
 
   echo "Installing fnm (node manager)"
   brew install fnm
+  echo "Installing Node lts"
+  fnm install --lts
+
 
   echo "Installing Git"
   brew install git
