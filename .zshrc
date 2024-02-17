@@ -4,6 +4,9 @@
 alias reloadterm="source ~/.zshrc"
 alias zshconfig="code ~/.zshrc"
 
+# Python
+alias python="python3"
+
 # Git
 gcop() {
   if [ n != "" ]
@@ -23,3 +26,8 @@ alias gstt="git status"
 
 # Node
 eval "$(fnm env --use-on-cd)"
+
+# Pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc

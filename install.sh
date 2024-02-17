@@ -26,9 +26,6 @@ if [[ `uname` == "Darwin"   ]]; then
 
   echo "Installing PyEnv"
   brew install pyenv
-  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-  echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-  echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
   echo "Installing golang"
   brew install go
@@ -55,9 +52,7 @@ fi
 
 echo "Removing existing dotfiles"
 # remove files if they already exist
-rm -rf ~/.config/nvim/coc-settings.json
-rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim 2> /dev/null
-rm -rf ~/.ideavimrc
+rm -rf ~/.zshrc
 
 echo "Creating new .zshrc"
 touch ~/.zshrc
