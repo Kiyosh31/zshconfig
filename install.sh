@@ -48,6 +48,10 @@ if [[ `uname` == "Darwin"   ]]; then
   brew install --cask font-cascadia-code-pl
   brew install --cask font-cascadia-mono
   brew install --cask font-cascadia-mono-pl
+
+  echo "Installing plugins"
+  brew install zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 fi
 
 echo "Removing existing dotfiles"
